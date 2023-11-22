@@ -7,7 +7,7 @@
 </ul>
 
 <form action="{{route('destroy', $support->id)}}" method="POST">
-    @csrf()
-    @method('DELETE')
+    @csrf();
+    @method('DELETE');
     <button type="submit">Deletar</button>
 </form>
