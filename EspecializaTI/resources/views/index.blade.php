@@ -16,6 +16,7 @@
             <td>{{$support->body}}</td>
             <td>
                 <a href="{{route('show', $support->id)}}">Detalhes</a>
+                <a href="{{route('edit', $support->id)}}">Editar</a>
             </td>
         </tr>
         @endforeach
