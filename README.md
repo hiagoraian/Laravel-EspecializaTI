@@ -1,1 +1,1 @@
-# Laravel-EspecializaTI
+# Laravel-EspecializaTI - Aprimorando projeto MVC
