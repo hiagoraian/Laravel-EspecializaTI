@@ -10,3 +10,5 @@ Route::post('/',[SupportController::class,'store'])->name('store');
 
 Route::get('/edit/{id}', [SupportController::class, 'edit'])->name('edit');
 Route::put('/{id}', [SupportController::class, 'update'])->name('update');
+
+Route::delete('/{id}', [SupportController::class, 'destroy'])->name('destroy');
