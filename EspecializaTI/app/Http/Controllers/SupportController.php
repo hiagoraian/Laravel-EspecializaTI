@@ -32,7 +32,7 @@ class SupportController extends Controller
 
     public function store(StoreUpdateSupportRequest $request, Support $support){
         
-        $data = $request->validate();
+        $data = $request->validated();
         $data['status'] = 'a';
 
         $support->create($data);
@@ -55,7 +55,7 @@ class SupportController extends Controller
             return back();
         }
 
-        $support->update($request->validate());
+        $support->update($request->validated());
 
         return redirect()->route('index');
     }
