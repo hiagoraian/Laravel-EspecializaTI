@@ -2,8 +2,8 @@
 
 <ul>
     <li>Assunto: {{ $support->subject}}</li>
-    <li>Assunto: {{ $support->status}}</li>
-    <li>Assunto: {{ $support->body}}</li>
+    <li>Status: {{getStatusSupport($support->status)}}</li>
+    <li>Descrição: {{ $support->body}}</li>
 </ul>
 
 <form action="{{route('destroy', $support->id)}}" method="POST">

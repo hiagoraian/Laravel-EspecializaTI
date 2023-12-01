@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\SupportStatus;
 use App\Http\Controllers\SupportController;
 use Illuminate\Support\Facades\Route;
 
@@ -12,3 +13,7 @@ Route::get('/edit/{id}', [SupportController::class, 'edit'])->name('edit');
 Route::put('/{id}', [SupportController::class, 'update'])->name('update');
 
 Route::delete('/{id}', [SupportController::class, 'destroy'])->name('destroy');
+
+Route::get('/test', function(){
+    dd(array_column(SupportStatus::cases(), 'name'));
+});
